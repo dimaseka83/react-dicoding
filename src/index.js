@@ -1,15 +1,18 @@
 import React from "react"
 import { createRoot } from "react-dom/client";
+import DicodingLogo from './dicoding-logo.png';
 
-const heading = React.createElement('h1', null, 'Biodata Perusahaan');
-
-const listItem1 = React.createElement('li', null, 'Nama: Dicoding Indonesia');
-const listItem2 = React.createElement('li', null, 'Bidang: Education');
-const listItem3 = React.createElement('li', null, 'Tagline: Decodes Ideas, Discover Potential.');
-
-const unorderedList = React.createElement('ul', null, [listItem1, listItem2, listItem3]);
-
-const container = React.createElement('div', null, [heading, unorderedList]);
+const divContainer = (
+    <div>
+        <h1>Biodata Perusahaan</h1>
+        <ul>
+            <li>Nama: Dicoding Indonesia</li>
+            <li>Bidang: Education</li>
+            <li>Tagline: Decode Ideas Discover Potential</li>
+            <img src={DicodingLogo}></img>
+        </ul>
+    </div>
+)
 
 const root = createRoot(document.getElementById('root'))
-root.render(container)
+root.render(divContainer)
